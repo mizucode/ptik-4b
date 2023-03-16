@@ -12,6 +12,12 @@
         />
         <!-- Stylesheet -->
         <link href="css/style.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
         <!-- Fav Icon -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <!-- Title -->
@@ -19,45 +25,84 @@
     </head>
     <body class="font-poppins m-0 p-0 border-box">
         <section class="bg-dsr">
-            <nav class="flex justify-around py-[1.4rem] px[7%] items-center">
-                <a href="#" class="font-bold text-white text-3xl"
-                    >PTIK <span class="text-ylw">B</span></a
+            <header>
+                <nav
+                    class="flex justify-between items-center w-[92%] mx-auto pt-5"
                 >
-
-                <div class="navbar-nav flex gap-5 font-semibold text-white">
-                    <a href="#">Home</a>
-                    <a href="#">Informasi</a>
-                    <a href="#">About Us</a>
-                    <a href="#">End</a>
-                </div>
-
-                <div class="more">
-                    <a
-                        href="#"
-                        class="px-6 text-2xl rounded-full bg-white text-ylw"
-                        >More</a
+                    <div>
+                        <h1 class="text-white text-3xl font-bold">
+                            PTIK <span class="text-ylw">B</span>
+                        </h1>
+                    </div>
+                    <div
+                        class="nav-links md:static absolute bg-white md:bg-dsr md:min-h-fit min-h-[60vh] md:w-auto left-0 top-[-100%] flex px-5 w-full items-center"
                     >
-                </div>
-            </nav>
-            <main class="w-3/4 mx-auto flex justify-around items-center pb-10">
+                        <ul
+                            class="flex md:flex-row flex-col md:items-center justify-around md:gap-[4vw] gap-8 md:text-white"
+                        >
+                            <li>
+                                <a href="#" class="font-bold">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" class="t font-bold">Kurang tw</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <button
+                            class="bg-white text-ylw px-4 py-1 rounded-full hover:bg-ylw hover:text-white"
+                        >
+                            More
+                        </button>
+                    </div>
+                </nav>
+            </header>
+
+            <main
+                class="mx-auto flex justify-evenly md:justify-around md:w-3/4 items-center mt-9 pb-10"
+            >
                 <main class="text-white">
-                    <h2 class="text-4xl font-medium">Selamat datang di</h2>
-                    <h1 class="text-7xl font-semibold">KELAS PTIK 4B</h1>
-                    <label for="" class="text-2xl font-medium"
+                    <h2 class="text-s md:text-xl font-medium">
+                        Selamat datang di
+                    </h2>
+                    <h1 class="text-xl md:text-3xl font-semibold">
+                        KELAS PTIK 4B
+                    </h1>
+                    <label for="" class="text-sm font-medium"
                         >We are <span class="multiText"></span
                     ></label>
                 </main>
 
                 <picture>
-                    <img src="../img/nindi.webp" width="600" alt="" />
+                    <img
+                        class="md:w-80"
+                        src="../img/nindi.webp"
+                        width="150"
+                        alt=""
+                    />
                 </picture>
             </main>
         </section>
 
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
             var typingeffect = new Typed(".multiText", {
-                strings: ["Anime", "Figuran", "Bayangan"],
+                strings: ["Anime", "Lorem", "Bayangan"],
                 loop: true,
                 typeSpeed: 100,
                 backSpeed: 80,
