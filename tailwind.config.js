@@ -4,6 +4,7 @@ module.exports = {
     theme: {
         container: {
             center: true,
+            padding: "16px",
         },
         extend: {
             fontFamily: {
@@ -12,6 +13,9 @@ module.exports = {
             colors: {
                 dsr: "#1455cd",
                 ylw: "#f4bc2b",
+            },
+            screens: {
+                "2xl": "1320px",
             },
         },
         plugins: [],
