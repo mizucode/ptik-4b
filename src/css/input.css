@@ -34,3 +34,38 @@ body {
 		@apply flex justify-start items-center gap-4 pl-8;
 	}
 }
+
+@layer components {
+	/* Header */
+	.menu-header {
+		@apply bg-white relative shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] w-full flex items-center z-10;
+	}
+	.navbar {
+		@apply flex items-center justify-between md:justify-around relative py-1 md:py-3;
+	}
+	.navbar-logo {
+		@apply flex items-center gap-1;
+	}
+	.brand-logo {
+		@apply text-dsr font-bold text-xl md:text-3xl;
+	}
+	.navbar-search {
+		@apply relative hidden md:flex;
+	}
+	.navbar-input {
+		@apply flex justify-center items-center;
+	}
+	.input-search {
+		@apply outline outline-offset-2 outline-abu outline-1 w-72 text-sm p-1;
+	}
+	/* Header */
+}
+
+@layer components {
+	.floating-input {
+		@apply appearance-none px-3 py-1 text-xl  rounded-sm transition duration-200 bg-transparent w-full focus:outline-none border border-black/30 focus:border-dsr;
+	}
+	.content {
+		@apply px-[70px];
+	}
+}
