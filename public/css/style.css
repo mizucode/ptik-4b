@@ -1087,6 +1087,10 @@ body {
     margin-top: 1rem;
   }
 
+  .lg\:mt-9 {
+    margin-top: 2.25rem;
+  }
+
   .lg\:block {
     display: block;
   }
