@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Stylesheet -->
+		<link href="css/style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+		<!-- Fav Icon -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<!-- Title -->
+		<title>PTIK B</title>
+	</head>
+	<body class="bg-slate-200">
+		<header class="bg-dark py-4">
+			<div class="container">
+				<main class="flex justify-between items-center">
+					<h1 class="font-bold text-white text-xl md:text-4xl">
+						Hi <span class="text-ylw">Riki</span>
+					</h1>
+					<i
+						class="fa-solid fa-gear font-bold text-white text-xl md:text-4xl"
+					></i>
+				</main>
+			</div>
+		</header>
+		<section class="pt-4 h-full rounded-md overflow-hidden">
+			<div class="container">
+				<main class="flex justify-start items-center gap-2">
+					<i class="fa-solid fa-clipboard-list text-4xl text-dsr"></i>
+					<div class="">
+						<h3 class="leading-none text-sm font-bold text-orange-500">Misi</h3>
+						<h2 class="leading-none font-bold text-slate-800">Semua Misi</h2>
+					</div>
+				</main>
+				<ul>
+					<li
+						class="list-none bg-white px-2 py-4 overflow-hidden rounded-md shadow-md mt-4 border-slate-400 border-2"
+					>
+						<h1
+							class="text-slate-800 text-xl lg:text-3xl truncate overflow-hidden font-bold"
+						>
+							Aku seorang player aov sdasdasdasdasd
+						</h1>
+
+						<p
+							class="text-slate-800 mb-3 mt-1 font-bold truncate overflow-hidden"
+						>
+							Description:
+							<span class="text-slate-600 font-medium"
+								>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Tenetur, sunt. Lorem, ipsum dolor sit amet consectetur
+								adipisicing elit. Dolor, numquam.</span
+							>
+						</p>
+						<h3 class="text-slate-800 font-medium">
+							Mulai :
+							<span class="font-medium bg-biru text-white px-2 rounded-sm py-1"
+								>10/11/2023</span
+							>
+						</h3>
+						<h3 class="pt-3 text-slate-800 font-medium">
+							Deadline :
+							<span
+								class="font-medium bg-pink-400 text-white px-2 rounded-sm py-1"
+								>10/11/2023</span
+							>
+						</h3>
+						<div class="flex justify-end mr-3">
+							<a
+								href="{{ route('todos.edit', $todo->id) }}"
+								class="px-2 py-1 bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+								><i class="fa-solid fa-plus"></i>Lihat Detail</a
+							>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="fixed bottom-0 left-0 w-full py-8">
+			<div class="container">
+				<div class="flex justify-end gap-4 -mt-16">
+					<div
+						class="bg-white shadow-md h-16 w-16 rounded-md flex justify-center items-center border-4 border-slate-200 hover:border-dark transition duration-300 ease-in-out"
+					>
+						<i class="fa-solid fa-plus text-3xl text-dark"></i>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
