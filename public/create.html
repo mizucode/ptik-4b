@@ -35,7 +35,7 @@
 			<div class="container">
 				<main class="flex justify-between items-center">
 					<h1 class="font-bold text-white text-xl md:text-4xl">
-						Hi <span class="text-ylw">Riki</span>
+						Buat Tugas <span class="text-ylw">Kamu</span>
 					</h1>
 					<i
 						class="fa-solid fa-gear font-bold text-white text-xl md:text-4xl"
@@ -43,52 +43,113 @@
 				</main>
 			</div>
 		</header>
-		<section class="pt-4 h-full rounded-md overflow-hidden">
-			<div class="container">
-				<main class="flex justify-start items-center gap-2">
-					<i class="fa-solid fa-clipboard-list text-4xl text-dsr"></i>
-					<div class="">
-						<h3 class="leading-none text-sm font-bold text-orange-500">Misi</h3>
-						<h2 class="leading-none font-bold text-slate-800">Semua Misi</h2>
-					</div>
-				</main>
-				<form action="{{ route('todos.store') }}" method="POST" class="mt-4">
-					<input
-						type="text"
-						name="title"
-						placeholder="Title"
-						required
-						class="w-full px-4 py-2 my-2 font-bold"
-					/>
-					<textarea
-						name="description"
-						placeholder="Description"
-						class="w-full px-4 py-2 my-2"
-					></textarea>
-					<div class="flex gap-2">
-						<label for="start_date">Tanggal Mulai:</label>
-						<input type="date" name="start_date" class="px-4 py-2" />
-					</div>
-					<div>
-						<label for="due_date">Deadline</label>
-						<input type="date" name="due_date" />
-					</div>
 
-					<button type="submit">Create</button>
-				</form>
-			</div>
-		</section>
-
-		<section class="fixed bottom-0 left-0 w-full py-8">
+		<form class="pt-4 h-full rounded-md">
 			<div class="container">
-				<div class="flex justify-end gap-4 -mt-16">
-					<div
-						class="bg-white shadow-md h-16 w-16 rounded-md flex justify-center items-center border-4 border-slate-200 hover:border-dark transition duration-300 ease-in-out"
-					>
-						<i class="fa-solid fa-plus text-3xl text-dark"></i>
+				<section class="w-full py-4 lg:py-0 mb-2 lg:mb-8">
+					<div class="container">
+						<div class="relative">
+							<h1
+								class="bg-primary text-text text-center font-semibold py-4 rounded-t-md"
+							>
+								Mau nugas apa?
+							</h1>
+						</div>
+						<div class="bg-text shadow-sm py-8 rounded-b-md">
+							<form class="flex px-4 gap-2 justify-center">
+								<input
+									maxlength="255"
+									type="text"
+									placeholder="Jangan lupa tugas matkul web dev  (⚈∇⚈〃 )"
+									class="text- font-semibold w-11/12 mx-auto flex justify-center py-2 px-2 text-xs border border-primary rounded-md"
+								/>
+							</form>
+						</div>
 					</div>
-				</div>
+				</section>
+				<section class="w-full py-4 lg:py-0 mb-2 lg:mb-8">
+					<div class="container">
+						<div class="relative">
+							<h1
+								class="bg-primary text-text text-center font-semibold py-4 rounded-t-md"
+							>
+								Tentang apa sih?
+							</h1>
+						</div>
+						<div class="bg-text shadow-sm py-8 rounded-b-md h-[15rem]">
+							<form class="flex px-4 gap-2">
+								<textarea
+									maxlength="255"
+									type="text"
+									placeholder="Tahukah kamu? Otak diciptakan untuk mengingat bukan melupakan, ciptakan kenangan baru untuk melupakan masa lalu hwehehehe（＾ ∀＾）"
+									class="font-semibold w-full h-[10rem] py-2 px-2 text-xs border border-primary rounded-md"
+								></textarea>
+							</form>
+						</div>
+					</div>
+				</section>
+				<section class="w-full py-4 lg:py-0 mb-2 lg:mb-8">
+					<div class="container">
+						<div class="relative">
+							<h1
+								class="bg-primary text-text text-center font-semibold py-4 rounded-t-md"
+							>
+								Cieee jadian ama tugas (✿˵ ꒡◡꒡˵)
+							</h1>
+						</div>
+						<div
+							class="bg-text shadow-sm py-8 rounded-b-md h-[5rem] flex justify-center items-center"
+						>
+							<form
+								class="flex overflow-hidden px-4 gap-2 justify-center items-center"
+							>
+								<label for="start_date" class="font-semibold whitespace-nowrap"
+									>Tanggal Mulai:</label
+								>
+								<input
+									type="date"
+									name="start_date"
+									class="px-4 py-2 bg-slate-200"
+								/>
+							</form>
+						</div>
+					</div>
+				</section>
+				<section class="w-full py-4 lg:py-0 mb-2 lg:mb-8">
+					<div class="container">
+						<div class="relative">
+							<h1
+								class="bg-primary text-red-600 text-center font-semibold py-4 rounded-t-md"
+							>
+								Masa rebahan berakhir
+							</h1>
+						</div>
+						<div
+							class="bg-text shadow-sm py-8 rounded-b-md h-[5rem] flex justify-center items-center"
+						>
+							<form
+								class="flex overflow-hidden px-4 gap-2 justify-center items-center"
+							>
+								<label for="due_date" class="font-semibold whitespace-nowrap"
+									>Deadline:</label
+								>
+								<input
+									type="date"
+									name="due_date"
+									class="px-4 py-2 bg-slate-200"
+								/>
+							</form>
+						</div>
+					</div>
+				</section>
+
+				<button
+					type="submit"
+					class="px-2 mt-6 mb-32 py-1 mx-auto text-2xl bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+				>
+					<i class="fa-solid fa-plus"></i> Buat Tugas
+				</button>
 			</div>
-		</section>
+		</form>
 	</body>
 </html>

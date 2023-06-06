@@ -43,54 +43,190 @@
 				</main>
 			</div>
 		</header>
-		<section class="pt-4 h-full rounded-md overflow-hidden">
+		<section class="pt-4 h-full rounded-md mb-8">
 			<div class="container">
 				<main class="flex justify-start items-center gap-2">
-					<i class="fa-solid fa-clipboard-list text-4xl text-dsr"></i>
+					<i
+						class="fa-solid fa-clipboard-list text-3xl lg:text-6xl text-dsr"
+					></i>
 					<div class="">
-						<h3 class="leading-none text-sm font-bold text-orange-500">Misi</h3>
-						<h2 class="leading-none font-bold text-slate-800">Semua Misi</h2>
+						<h3
+							class="leading-none text-sm lg:text-2xl font-bold text-orange-500"
+						>
+							Misi
+						</h3>
+						<h2 class="leading-none font-bold lg:text-xl text-slate-800">
+							Semua Misi
+						</h2>
 					</div>
 				</main>
-				<ul>
+				<ul class="lg:pt-4">
 					<li
-						class="list-none bg-white px-2 py-4 overflow-hidden rounded-md shadow-md mt-4 border-slate-400 border-2"
+						class="list-none bg-white px-2 py-2 rounded-xl shadow-md mt-4 hover:bg-orange-100 transition duration-300 ease-in-out"
 					>
-						<h1
-							class="text-slate-800 text-xl lg:text-3xl truncate overflow-hidden font-bold"
+						<div class="lg:container lg:py-4">
+							<h1
+								class="text-slate-800 text-lg lg:text-3xl truncate font-semibold"
+							>
+								Aku ingin jadi anime
+							</h1>
+						</div>
+						<div
+							class="flex justify-between items-center mt-8 lg:container lg:py-4"
 						>
-							Aku seorang player aov sdasdasdasdasd
-						</h1>
-
-						<p
-							class="text-slate-800 mb-3 mt-1 font-bold truncate overflow-hidden"
+							<main class="flex justify-start items-center gap-1 opacity-50">
+								<i class="fa-regular fa-calendar lg:text-xl"></i>
+								<p class="text-[10px] lg:text-xl mt-[3px] font-semibold">
+									Deadline : <em>06/06/2023</em>
+								</p>
+							</main>
+							<div>
+								<a
+									href="create.html"
+									class="px-2 py-1 text-xs lg:text-xl bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+									><i class="fa-solid fa-plus"></i>Lihat Detail</a
+								>
+							</div>
+						</div>
+					</li>
+					<li
+						class="list-none bg-white px-2 py-2 rounded-xl shadow-md mt-4 hover:bg-orange-100 transition duration-300 ease-in-out"
+					>
+						<div class="lg:container lg:py-4">
+							<h1
+								class="text-slate-800 text-lg lg:text-3xl truncate font-semibold"
+							>
+								Aku ingin jadi anime
+							</h1>
+						</div>
+						<div
+							class="flex justify-between items-center mt-8 lg:container lg:py-4"
 						>
-							Description:
-							<span class="text-slate-600 font-medium"
-								>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Tenetur, sunt. Lorem, ipsum dolor sit amet consectetur
-								adipisicing elit. Dolor, numquam.</span
+							<main class="flex justify-start items-center gap-1 opacity-50">
+								<i class="fa-regular fa-calendar lg:text-xl"></i>
+								<p class="text-[10px] lg:text-xl mt-[3px] font-semibold">
+									Deadline : <em>06/06/2023</em>
+								</p>
+							</main>
+							<div>
+								<a
+									href="{{ route('todos.edit', $todo->id) }}"
+									class="px-2 py-1 text-xs lg:text-xl bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+									><i class="fa-solid fa-plus"></i>Lihat Detail</a
+								>
+							</div>
+						</div>
+					</li>
+					<li
+						class="list-none bg-white px-2 py-2 rounded-xl shadow-md mt-4 hover:bg-orange-100 transition duration-300 ease-in-out"
+					>
+						<div class="lg:container lg:py-4">
+							<h1
+								class="text-slate-800 text-lg lg:text-3xl truncate font-semibold"
 							>
-						</p>
-						<h3 class="text-slate-800 font-medium">
-							Mulai :
-							<span class="font-medium bg-biru text-white px-2 rounded-sm py-1"
-								>10/11/2023</span
+								Aku ingin jadi anime
+							</h1>
+						</div>
+						<div
+							class="flex justify-between items-center mt-8 lg:container lg:py-4"
+						>
+							<main class="flex justify-start items-center gap-1 opacity-50">
+								<i class="fa-regular fa-calendar lg:text-xl"></i>
+								<p class="text-[10px] lg:text-xl mt-[3px] font-semibold">
+									Deadline : <em>06/06/2023</em>
+								</p>
+							</main>
+							<div>
+								<a
+									href="{{ route('todos.edit', $todo->id) }}"
+									class="px-2 py-1 text-xs lg:text-xl bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+									><i class="fa-solid fa-plus"></i>Lihat Detail</a
+								>
+							</div>
+						</div>
+					</li>
+					<li
+						class="list-none bg-white px-2 py-2 rounded-xl shadow-md mt-4 hover:bg-orange-100 transition duration-300 ease-in-out"
+					>
+						<div class="lg:container lg:py-4">
+							<h1
+								class="text-slate-800 text-lg lg:text-3xl truncate font-semibold"
 							>
-						</h3>
-						<h3 class="pt-3 text-slate-800 font-medium">
-							Deadline :
-							<span
-								class="font-medium bg-pink-400 text-white px-2 rounded-sm py-1"
-								>10/11/2023</span
+								Aku ingin jadi anime
+							</h1>
+						</div>
+						<div
+							class="flex justify-between items-center mt-8 lg:container lg:py-4"
+						>
+							<main class="flex justify-start items-center gap-1 opacity-50">
+								<i class="fa-regular fa-calendar lg:text-xl"></i>
+								<p class="text-[10px] lg:text-xl mt-[3px] font-semibold">
+									Deadline : <em>06/06/2023</em>
+								</p>
+							</main>
+							<div>
+								<a
+									href="{{ route('todos.edit', $todo->id) }}"
+									class="px-2 py-1 text-xs lg:text-xl bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+									><i class="fa-solid fa-plus"></i>Lihat Detail</a
+								>
+							</div>
+						</div>
+					</li>
+					<li
+						class="list-none bg-white px-2 py-2 rounded-xl shadow-md mt-4 hover:bg-orange-100 transition duration-300 ease-in-out"
+					>
+						<div class="lg:container lg:py-4">
+							<h1
+								class="text-slate-800 text-lg lg:text-3xl truncate font-semibold"
 							>
-						</h3>
-						<div class="flex justify-end mr-3">
-							<a
-								href="{{ route('todos.edit', $todo->id) }}"
-								class="px-2 py-1 bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
-								><i class="fa-solid fa-plus"></i>Lihat Detail</a
+								Aku ingin jadi anime
+							</h1>
+						</div>
+						<div
+							class="flex justify-between items-center mt-8 lg:container lg:py-4"
+						>
+							<main class="flex justify-start items-center gap-1 opacity-50">
+								<i class="fa-regular fa-calendar lg:text-xl"></i>
+								<p class="text-[10px] lg:text-xl mt-[3px] font-semibold">
+									Deadline : <em>06/06/2023</em>
+								</p>
+							</main>
+							<div>
+								<a
+									href="{{ route('todos.edit', $todo->id) }}"
+									class="px-2 py-1 text-xs lg:text-xl bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+									><i class="fa-solid fa-plus"></i>Lihat Detail</a
+								>
+							</div>
+						</div>
+					</li>
+					<li
+						class="list-none bg-white px-2 py-2 rounded-xl shadow-md mt-4 hover:bg-orange-100 transition duration-300 ease-in-out"
+					>
+						<div class="lg:container lg:py-4">
+							<h1
+								class="text-slate-800 text-lg lg:text-3xl truncate font-semibold"
 							>
+								Aku ingin jadi anime
+							</h1>
+						</div>
+						<div
+							class="flex justify-between items-center mt-8 lg:container lg:py-4"
+						>
+							<main class="flex justify-start items-center gap-1 opacity-50">
+								<i class="fa-regular fa-calendar lg:text-xl"></i>
+								<p class="text-[10px] lg:text-xl mt-[3px] font-semibold">
+									Deadline : <em>06/06/2023</em>
+								</p>
+							</main>
+							<div>
+								<a
+									href="{{ route('todos.edit', $todo->id) }}"
+									class="px-2 py-1 text-xs lg:text-xl bg-dsr rounded-md flex justify-center items-center gap-2 font-medium text-white hover:shadow-lg hover:bg-sky-500 transition duration-300 ease-in-out"
+									><i class="fa-solid fa-plus"></i>Lihat Detail</a
+								>
+							</div>
 						</div>
 					</li>
 				</ul>

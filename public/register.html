@@ -28,7 +28,8 @@
 			</div>
 		</section>
 		<form
-			action="#"
+			method="POST"
+			action="{{ route('register') }}"
 			class="w-full mt-5 md:bg-white md:w-[30rem] md:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] md:py-4 rounded-md"
 		>
 			<div class="flex justify-center flex-wrap">
@@ -38,7 +39,11 @@
 					<input
 						type="text"
 						id="name"
-						autocomplete="off"
+						value="{{ old('name') }}"
+						required
+						name="name"
+						autocomplete="name"
+						autofocus
 						class="floating-input"
 					/>
 				</div>
@@ -47,7 +52,10 @@
 					<input
 						type="email"
 						id="email"
-						autocomplete="off"
+						name="email"
+						value="{{ old('email') }}"
+						required
+						autocomplete="email"
 						class="floating-input"
 					/>
 				</div>
@@ -59,37 +67,38 @@
 					<input
 						type="password"
 						id="password"
-						autocomplete="off"
+						name="password"
+						required
+						autocomplete="new-password"
 						class="floating-input"
 					/>
 				</div>
 				<div class="flex justify-center flex-col w-full px-6">
-					<label for="cpassword" class="text-sm py-2 font-semibold"
+					<label for="password-confirm" class="text-sm py-2 font-semibold"
 						>Konfirmasi Password</label
 					>
 					<input
 						type="password"
-						id="cpassword"
-						autocomplete="off"
+						id="password-confirm"
+						name="password_confirmation"
+						required
+						autocomplete="new-password"
 						class="floating-input"
 					/>
 				</div>
-
-				<div class="text-right flex-col w-full px-6">
-					<a href="./" class="text-biru"></a>
-				</div>
 			</div>
-			<div class="flex justify-center flex-col w-full px-6 md:py-6">
-				<a
-					href="./index.html"
+			<div class="flex justify-center flex-col w-full px-6 py-6 mt-6">
+				<button
+					type="submit"
 					class="bg-biru w-full py-3 text-xl rounded-md text-white text-center"
 				>
 					Daftar Sekarang
-				</a>
+				</button>
+				<a href="./index.html"> </a>
 			</div>
 
 			<div class="text-center px-6 py-2">
-				<a href="./login.html" class="text-biru text-sm"
+				<a href="./login" class="text-biru text-sm"
 					>Sudah punya akun? Login disini!</a
 				>
 			</div>
