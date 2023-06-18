@@ -7,6 +7,9 @@ module.exports = {
 			padding: "16px",
 		},
 		extend: {
+			backgroundImage: {
+				ayaka: "url('/img/ayaka.jpg')",
+			},
 			fontFamily: {
 				poppins: ["Poppins"],
 			},
