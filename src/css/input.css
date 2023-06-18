@@ -69,4 +69,7 @@ body {
 	.content {
 		@apply px-[70px];
 	}
+	.agus {
+		@apply py-2 px-2 bg-red-500 rounded-md hover:bg-green-400;
+	}
 }

@@ -13,6 +13,7 @@ module.exports = {
 			colors: {
 				dsr: "#1455cd",
 				ylw: "#f4bc2b",
+				ylw2: "#FFB800",
 				niger: "#212529",
 				biru: "#1390ff",
 				kuning: "#ffd93d",
@@ -28,6 +29,8 @@ module.exports = {
 				backgroundColor: "#f5f6fb",
 				backgroundFooter: "#06165b",
 				text: "#ffffff",
+				BgNote: "#F5F6FB",
+				BgNoteHover: "#BAE6FD",
 			},
 			screens: {
 				"2xl": "1320px",

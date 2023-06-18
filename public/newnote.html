@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Stylesheet -->
+		<link href="css/style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+		<!-- Fav Icon -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<!-- Title -->
+		<title>PTIK B</title>
+
+		<style>
+			.dark-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: 9999;
+				display: none;
+			}
+
+			.menu-container {
+				position: relative;
+			}
+
+			.menu {
+				position: absolute;
+
+				z-index: 10000;
+				transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+			}
+		</style>
+	</head>
+	<body class="bg-BgNote">
+		<header>
+			<div class="container">
+				<div class="flex items-center justify-between text-2xl py-4">
+					<div><i class="fa-solid fa-arrow-left text-2xl"></i></div>
+					<div class="flex justify-center ml-12 gap-8">
+						<button id="toggleMenu">
+							<i class="fa-solid fa-ellipsis-vertical"></i>
+						</button>
+					</div>
+				</div>
+				<div class="menu-container">
+					<div
+						id="menu"
+						class="bg-white w-40 rounded-md overflow-hidden hidden right-0 top-0 -mt-12 menu"
+					>
+						<a href="">
+							<div class="px-4 py-2 font-semibold hover:bg-gray-200">Hapus</div>
+						</a>
+						<a href="">
+							<div class="px-4 py-2 font-semibold hover:bg-gray-200">
+								Simpan
+							</div>
+						</a>
+					</div>
+				</div>
+				<div id="darkOverlay" class="dark-overlay"></div>
+			</div>
+		</header>
+		<form action="" class="bg-BgNote">
+			<div class="container">
+				<input
+					type="text"
+					placeholder="Judul"
+					name=""
+					id=""
+					class="w-full font-bold text-xl px-2 py-2 focus:outline-none bg-BgNote"
+				/>
+				<input
+					type="date"
+					name=""
+					id=""
+					class="px-2 py-2 focus:outline-none bg-BgNote"
+				/>
+				<textarea
+					name="text"
+					id=""
+					cols="30"
+					rows="10"
+					placeholder="Mulai Mengetik"
+					class="w-full px-2 py-2 focus:outline-none bg-BgNote"
+				></textarea>
+			</div>
+		</form>
+
+		<script>
+			const toggleMenuBtn = document.getElementById("toggleMenu");
+			const menu = document.getElementById("menu");
+			const darkOverlay = document.getElementById("darkOverlay");
+
+			const handleClickOutsideMenu = (event) => {
+				if (
+					!menu.contains(event.target) &&
+					!toggleMenuBtn.contains(event.target)
+				) {
+					menu.classList.add("hidden");
+					darkOverlay.style.display = "none";
+				}
+			};
+
+			const handleToggleMenu = () => {
+				menu.classList.toggle("hidden");
+				darkOverlay.style.display = menu.classList.contains("hidden")
+					? "none"
+					: "block";
+			};
+
+			toggleMenuBtn.addEventListener("click", handleToggleMenu);
+			document.addEventListener("click", handleClickOutsideMenu);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Stylesheet -->
+		<link href="css/style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+		<!-- Fav Icon -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<!-- Title -->
+		<title>PTIK B</title>
+	</head>
+	<body id="bg-muter">
+		<section class="h-screen w-screen">
+			<div
+				class="w-[20rem] h-[20rem] rounded-full mt-16 mx-auto overflow-hidden"
+				id="waduh"
+			>
+				<img src="../img/waduh.jpeg" alt="" class="object-cover" />
+			</div>
+		</section>
+		<script src="../src/script.js"></script>
+
+		<script>
+			const colors = [
+				"bg-red-500",
+				"bg-blue-500",
+				"bg-green-500",
+				"bg-yellow-500",
+				"bg-purple-500",
+				"bg-pink-500",
+				"bg-indigo-500",
+				"bg-teal-500",
+				"bg-orange-500",
+				"bg-cyan-500",
+				"bg-gray-500",
+				"bg-red-600",
+				"bg-blue-600",
+				"bg-green-600",
+				"bg-yellow-600",
+			];
+
+			const section = document.getElementById("bg-muter");
+
+			let index = 0;
+			setInterval(() => {
+				section.className = colors[index % colors.length];
+				index++;
+			}, 50);
+
+			const element = document.getElementById("waduh");
+
+			let rotation = 0;
+			const rotateElement = () => {
+				rotation += ; // Waduh
+
+				element.style.transform = `rotate(${rotation}deg)`;
+
+				requestAnimationFrame(rotateElement);
+			};
+
+			rotateElement();
+		</script>
+	</body>
+</html>
