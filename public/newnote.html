@@ -29,15 +29,6 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<!-- Title -->
 		<title>PTIK B</title>
-		<style>
-			/* Menghilangkan logo calendar pada input date */
-			input[type="date"]::-webkit-calendar-picker-indicator,
-			input[type="date"]::-webkit-inner-spin-button,
-			input[type="date"]::-webkit-clear-button {
-				display: none;
-				-webkit-appearance: none;
-			}
-		</style>
 
 		<style></style>
 	</head>
@@ -45,7 +36,11 @@
 		<header>
 			<div class="container">
 				<div class="flex items-center justify-between text-2xl py-4">
-					<div><i class="fa-solid fa-arrow-left text-2xl"></i></div>
+					<div>
+						<a href="./note.html"
+							><i class="fa-solid fa-arrow-left text-2xl"></i
+						></a>
+					</div>
 					<div class="flex justify-center ml-12 gap-8">
 						<button id="toggleMenu">
 							<i class="fa-solid fa-ellipsis-vertical"></i>
@@ -55,13 +50,13 @@
 				<div class="menu-container">
 					<div
 						id="menu"
-						class="bg-white w-40 rounded-md overflow-hidden hidden right-0 top-0 -mt-12 menu"
+						class="bg-white w-60 rounded-md overflow-hidden hidden right-0 top-0 -mt-12 menu"
 					>
 						<a href="">
-							<div class="px-4 py-2 font-semibold hover:bg-gray-200">Hapus</div>
+							<div class="px-4 py-4 font-semibold hover:bg-gray-200">Hapus</div>
 						</a>
 						<a href="">
-							<div class="px-4 py-2 font-semibold hover:bg-gray-200">
+							<div class="px-4 py-4 font-semibold hover:bg-gray-200">
 								Simpan
 							</div>
 						</a>
@@ -77,16 +72,18 @@
 					placeholder="Judul"
 					name=""
 					id=""
-					class="w-full font-bold text-xl px-2 py-2 focus:outline-none bg-BgNote"
+					class="w-full font-medium text-2xl px-2 py-2 focus:outline-none bg-BgNote"
 				/>
-				<div class="mb-2">
+				<div class="mb-2 flex items-center gap-4">
 					<input
 						type="date"
 						name=""
 						id=""
-						class="h-6 text-xs px-2 py-2 outline-none bg-BgNote"
+						class="h-6 text-xl py-4 px-2 bg-white rounded-lg opacity-50"
 					/>
-					<label for="fileInput"><i class="fa-solid fa-image"></i></label>
+					<label for="fileInput"
+						><i class="fa-solid fa-image text-3xl opacity-50"></i
+					></label>
 				</div>
 				<div>
 					<div class="px-2 py-2 outline-none bg-BgNote -mt-2 text-xs">
