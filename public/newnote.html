@@ -29,30 +29,17 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<!-- Title -->
 		<title>PTIK B</title>
-
 		<style>
-			.dark-overlay {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100vw;
-				height: 100vh;
-				background-color: rgba(0, 0, 0, 0.5);
-				z-index: 9999;
+			/* Menghilangkan logo calendar pada input date */
+			input[type="date"]::-webkit-calendar-picker-indicator,
+			input[type="date"]::-webkit-inner-spin-button,
+			input[type="date"]::-webkit-clear-button {
 				display: none;
-			}
-
-			.menu-container {
-				position: relative;
-			}
-
-			.menu {
-				position: absolute;
-
-				z-index: 10000;
-				transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+				-webkit-appearance: none;
 			}
 		</style>
+
+		<style></style>
 	</head>
 	<body class="bg-BgNote">
 		<header>
@@ -92,18 +79,35 @@
 					id=""
 					class="w-full font-bold text-xl px-2 py-2 focus:outline-none bg-BgNote"
 				/>
-
-				<div class="px-2 py-2 focus:outline-none bg-BgNote">
-					<label for="tanggal">Pilih tanggal:</label>
-					<input type="date" id="tanggal" />
+				<div class="mb-2">
+					<input
+						type="date"
+						name=""
+						id=""
+						class="h-6 text-xs px-2 py-2 outline-none bg-BgNote"
+					/>
+					<label for="fileInput"><i class="fa-solid fa-image"></i></label>
 				</div>
+				<div>
+					<div class="px-2 py-2 outline-none bg-BgNote -mt-2 text-xs">
+						<input
+							type="file"
+							id="fileInput"
+							class="text bg-BgNote outline-none opacity-50 hidden"
+						/>
+					</div>
+					<div id="previewContainer" class="preview-container">
+						<img id="previewImage" src="" alt="" />
+					</div>
+				</div>
+
 				<textarea
 					name="text"
-					id=""
+					id="textareaInput"
 					cols="30"
 					rows="10"
 					placeholder="Mulai Mengetik"
-					class="w-full px-2 py-2 focus:outline-none bg-BgNote"
+					class="w-full px-2 py-2 focus:outline-none bg-BgNote -mt-48"
 				></textarea>
 			</div>
 		</form>
@@ -132,6 +136,30 @@
 
 			toggleMenuBtn.addEventListener("click", handleToggleMenu);
 			document.addEventListener("click", handleClickOutsideMenu);
+		</script>
+
+		<script>
+			var fileInput = document.getElementById("fileInput");
+			var previewContainer = document.getElementById("previewContainer");
+			var previewImage = document.getElementById("previewImage");
+			var textareaInput = document.getElementById("textareaInput");
+
+			fileInput.addEventListener("change", function (e) {
+				var file = e.target.files[0];
+				var reader = new FileReader();
+
+				if (file) {
+					reader.onload = function (e) {
+						previewImage.src = e.target.result;
+						previewContainer.style.display = "flex";
+						textareaInput.style.marginTop = "8px";
+					};
+					reader.readAsDataURL(file);
+				} else {
+					previewContainer.style.display = "none";
+					textareaInput.style.marginTop = "4px";
+				}
+			});
 		</script>
 	</body>
 </html>
